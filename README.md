@@ -388,22 +388,33 @@ Checking if DHCP is successful:
 
 Management-PC
 
+![mgt pc](https://github.com/user-attachments/assets/050a38b6-a835-4ac5-9263-768710812d04)
+
 
 Marketing-PC
+
+![mkt pc](https://github.com/user-attachments/assets/52f989be-f8b2-4612-8e9c-28927696c8b1)
 
 
 Guest-PC
 
+![guest pc](https://github.com/user-attachments/assets/45902671-de6f-415b-9156-c0512dd6d3c3)
+
 
 Configuring Access points:
 
-Research-AP
+Management-AP
+
+![mgt AP](https://github.com/user-attachments/assets/d61b4347-d906-463a-9d38-14ea486d8838)
 
 
-Research-Laptop
+Management-Laptop
+
+![mgt laptop](https://github.com/user-attachments/assets/f760e10c-2edb-449a-9b80-db14fcd83e1e)
 
 
 ## Final Network in Packet Tracer
 
+![network](https://github.com/user-attachments/assets/4fb979e5-6f00-42f6-9e3a-e13a66ca6f5e)
 
 
