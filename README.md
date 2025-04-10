@@ -1,14 +1,10 @@
 # Design and Implementation of an Enterprise Bank network
 
-Design and Implementation of an Enterprise Bank network
-
-# Design and Implementation of an Enterprise Bank network
-
 ## Networking simulation software used:
 Cisco Packet Tracer 8.2.2
 
 ## Scenario:
-Radeon Company Ltd. is a US-owned company that deals with Banking and Insurance. The company intends to expand its services across the African continent having the first branch to be located in Nairobi, Kenya. The company has secured a four-story building to operate within the Kenyan capital city. Therefore, the company would like to allow sourcing knowledge from a group of final-year students from the local university to design and implement their company network. Assume you are among the students to take over this role, carefully read down the requirements then model the design and implement the network based on the company's needs. Each floor has departments as provided in the table below:
+Celestia Bank Ltd. is a US-owned company that deals with Banking and Insurance. The company intends to expand its services across the African continent having the first branch to be located in Nairobi, Kenya. The company has secured a four-story building to operate within the Kenyan capital city. Therefore, the company would like to allow sourcing knowledge from a group of final-year students from the local university to design and implement their company network. Assume you are among the students to take over this role, carefully read down the requirements then model the design and implement the network based on the company's needs. Each floor has departments as provided in the table below:
 
 <img width="470" alt="image" src="https://github.com/user-attachments/assets/ef6f6915-0b19-4e4b-bc4b-f4feebb34796" />
 
@@ -69,27 +65,16 @@ Radeon Company Ltd. is a US-owned company that deals with Banking and Insurance.
 
 ## Subnetting the network:
 
-Base Network: 192.168.10.0
+Base Network: 192.168.10.0/24 (Class C )
 
-No. of subnets required: 3
+No of Hosts in Each Department: 60 
 
-No. of subnets = 2^n (n = number of bits borrowed)
+Subnet Size=2^n−2 -----> n - host bits
 
-2^n = 3 (n = number of bits borrowed)
+2^n−2 >= 60 -----> Therefore: n = 6
 
-2^2 = 4 
+New Subnet Mask= 32-6 = /26 - 255.255.255.192
 
-Therefore: n = 2
-
-Class C address:
-
-255.255.255.0 = 11111111.11111111.11111111.00000000
-
-Borrowing 4 bits from host portion:
-
-11111111.11111111.11111111.11000000
-
-New subnet mask: 255.255.255.192 or /26
 
 ## IP Addressing
 
@@ -105,301 +90,320 @@ Base Network Address: 10.10.10.0
 
 ## Configuration:
 
-Turning on all necessary router ports:
-
-Floor1-Router
-
-<img width="327" alt="image" src="https://github.com/user-attachments/assets/aacf7231-aa5d-4d98-a6fb-78d5dbbf68ae" />
-
-Floor2-Router
-
-<img width="360" alt="image" src="https://github.com/user-attachments/assets/496f5822-9f21-4262-a126-fd1fc3d1196c" />
-
-Floor3-Router
-
-<img width="459" alt="image" src="https://github.com/user-attachments/assets/cd419e23-db35-4367-a41d-28f40e9e58d6" />
-
-Floor4-Router
-
-<img width="459" alt="image" src="https://github.com/user-attachments/assets/bb1fbdc4-fcfc-47ca-bc32-4d1f149b6d7f" />
+Basic Configurations on Access switches/L3 Switches and Routers:
 
 Configuring access layer switches:
 
 Floor1-Management-SW
 
-<img width="322" alt="image" src="https://github.com/user-attachments/assets/fa096733-7ce4-44a2-b0ba-65c2dfd9ae6c" />
+![F1-MGT](https://github.com/user-attachments/assets/49142dba-6239-4116-9c04-425c5921a781)
 
 Floor1-Research-SW
 
-<img width="341" alt="image" src="https://github.com/user-attachments/assets/7617d4b2-df19-4ee2-8c46-00ad1b78fa54" />
+![F1-Research](https://github.com/user-attachments/assets/50b411e1-687d-443f-bfce-a9b6ead7458b)
 
 Floor1-HR-SW
 
-<img width="323" alt="image" src="https://github.com/user-attachments/assets/fbdde739-d9ed-4c64-b2d3-dd0bed52d7da" />
+![F1-HR](https://github.com/user-attachments/assets/190e00c1-92ce-4d18-a84c-084d396271f3)
 
 Floor2-Marketing-SW
 
-<img width="352" alt="image" src="https://github.com/user-attachments/assets/1d07b6db-b57f-46b5-ae35-607aac1ee138" />
+![F2-MKT](https://github.com/user-attachments/assets/342ad7cb-14a5-47b4-8d50-636b2e28c99a)
 
 Floor2-Accounting-SW
 
-<img width="360" alt="image" src="https://github.com/user-attachments/assets/73d1d525-a505-4fc6-971d-86ce13ea4aea" />
+![F2-ACC](https://github.com/user-attachments/assets/75cdbcaf-e657-4146-85ac-9bf1b2b6e500)
 
 Floor2-Finance-SW
 
-<img width="334" alt="image" src="https://github.com/user-attachments/assets/5f6d4bf9-d57a-4864-86bf-f74d70083536" />
+![F2-FIN](https://github.com/user-attachments/assets/464caa10-1860-45da-bd6d-69a0b5e4b28e)
 
 Floor3-Logistics-SW
 
-<img width="348" alt="image" src="https://github.com/user-attachments/assets/6acc0639-6cda-4ae5-b2fb-551b843e1a65" />
+![F3-LOG](https://github.com/user-attachments/assets/d8fbdd97-a607-477f-9ad0-3e1394e8d52c)
 
 Floor3-Customer-SW
 
-<img width="368" alt="image" src="https://github.com/user-attachments/assets/25b17155-f899-4e36-b34b-8522d84129a6" />
+![F3-CUST](https://github.com/user-attachments/assets/4712a1a1-950a-45d2-9435-4582e0e10cdd)
 
 Floor3-Guest-SW
 
-<img width="336" alt="image" src="https://github.com/user-attachments/assets/57b43df9-014e-4179-9029-a243c57ac4f4" />
+![F3-Guest](https://github.com/user-attachments/assets/0325059e-c0b1-4d6d-ba52-6e5733bf33ed)
 
 Floor4-Admin-SW
 
-<img width="323" alt="image" src="https://github.com/user-attachments/assets/b7368206-4e67-420e-9220-8d3c2d3bd703" />
+![F4-Admin](https://github.com/user-attachments/assets/d06c1fe1-69cb-4fd4-89f0-96916fc7e13a)
 
 Floor4-ICT-SW
 
-<img width="323" alt="image" src="https://github.com/user-attachments/assets/ff3d758d-a758-4ecb-8197-a1d552e861e6" />
+![F4-IT](https://github.com/user-attachments/assets/d74ad6d1-3f03-4c36-a4ce-280e88f7d45e)
 
 Floor4-Server-SW
 
-<img width="323" alt="image" src="https://github.com/user-attachments/assets/53668018-f835-46cc-9a04-2b5775c6b6a5" />
+![F4-Server](https://github.com/user-attachments/assets/d8ad7df9-ca73-46b6-bec4-b2f7acf1635d)
+
+
 
 Configuring Distribution layer switches:
 
 Floor1-L3SW
 
-<img width="384" alt="image" src="https://github.com/user-attachments/assets/ed9a7304-3bfe-4e67-8f16-22f3b425e9e9" />
+![F1-L3SW](https://github.com/user-attachments/assets/1cd28d9c-c487-498d-8d3b-3b236a019854)
 
 Floor2-L3SW
 
-<img width="383" alt="image" src="https://github.com/user-attachments/assets/134a6b6f-4241-4ebf-92aa-c57ece1e4724" />
+![F2-L3SW](https://github.com/user-attachments/assets/0128f3fe-43de-4e3b-9f02-cd846d9824c2)
 
 Floor3-L3SW
 
-<img width="390" alt="image" src="https://github.com/user-attachments/assets/b5140307-f65d-4349-99ce-813f80d49dca" />
+![F3-L3SW](https://github.com/user-attachments/assets/a830a485-7147-45d4-b540-115de2c11cdf)
 
 Floor4-L3SW
 
-<img width="382" alt="image" src="https://github.com/user-attachments/assets/4690693f-9d34-455d-8075-abf8707633bc" />
+![F4-L3SW](https://github.com/user-attachments/assets/c5aa3167-25f0-46fb-a58e-e82de0dd551a)
+
+
+
 
 Configuring Core Layer Routers:
 
 Floor1 router
 
-<img width="389" alt="image" src="https://github.com/user-attachments/assets/7f6c43c2-6c93-45d0-8c49-829d8476d4a3" />
+![F1-Router](https://github.com/user-attachments/assets/d80a5b83-ef45-41d1-b16e-4537ec8c3c98)
 
 Floor2 router
 
-<img width="381" alt="image" src="https://github.com/user-attachments/assets/7632b56c-12e0-424f-95ff-712940b367f0" />
+![F2-Router](https://github.com/user-attachments/assets/903d0c42-18cb-4ef8-815c-13c83a6f147a)
 
 Floor3 router
 
-<img width="383" alt="image" src="https://github.com/user-attachments/assets/ec6e5650-1318-4dd2-867d-7bce9fce04d8" />
+![F3-Router](https://github.com/user-attachments/assets/552a966b-3ad8-40a2-8570-966f545a1363)
 
 Floor4 router
 
-<img width="383" alt="image" src="https://github.com/user-attachments/assets/b47aebeb-2a71-44ed-92ff-4343f543e5e8" />
+![F4-Router](https://github.com/user-attachments/assets/d04e0c79-decd-40f5-bf4a-c0e1fe17be7b)
+
+
+
+
+
 
 Configuring trunk and access ports, VLANS and port security:
 
 Floor1-Management-SW
 
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/7f07ce18-e5fe-4d85-b5c2-d4117ec29e73" />
-
-
-<img width="273" alt="image" src="https://github.com/user-attachments/assets/1d8ccda3-c41c-4e41-8897-8a1c73421f49" />
+![sw-mgt](https://github.com/user-attachments/assets/a2b3c49e-0686-45b3-8023-db88aa8964d1)
 
 Floor1-Research-SW
 
-<img width="416" alt="image" src="https://github.com/user-attachments/assets/21e582fd-a6b8-438d-8bd6-fb121c416fe0" />
+![sw-res](https://github.com/user-attachments/assets/5e56ff1b-86c6-4713-bdbb-e6c998661d94)
 
 Floor1-HR-SW
 
-<img width="373" alt="image" src="https://github.com/user-attachments/assets/5abfa06c-9aff-41bc-b3c4-32592bacc2b2" />
+![sw-HR](https://github.com/user-attachments/assets/a71e2327-e0f7-496e-8f22-594875b0eb22)
 
 Floor2-Marketing-SW
 
-<img width="407" alt="image" src="https://github.com/user-attachments/assets/2dc97fba-95ce-40ba-94e0-c3054ce0da61" />
+![sw-mkt](https://github.com/user-attachments/assets/2fd45f9c-15ad-43f5-bb89-5e5d85344c8a)
 
 Floor2-Accounting-SW
 
-<img width="462" alt="image" src="https://github.com/user-attachments/assets/1b668f01-6977-417c-bd41-c902c9bd91f4" />
+![sw-Acc](https://github.com/user-attachments/assets/9630d2a0-8147-4803-8a04-1289916300af)
 
 Floor2-Finance-SW
 
-<img width="460" alt="image" src="https://github.com/user-attachments/assets/e986a67d-1803-4833-81c8-37dec3a6ccc8" />
+![sw -Fin](https://github.com/user-attachments/assets/a4c0e83f-0902-4411-8c25-23f8bc19f23c)
 
 Floor3-Logistics-SW
 
-<img width="458" alt="image" src="https://github.com/user-attachments/assets/64add720-70c6-43b9-8303-bcb911db4499" />
+![sw-log](https://github.com/user-attachments/assets/b10317e5-a6f1-4289-b52f-af4783a93dfc)
 
 Floor3-Customer-SW
 
-<img width="457" alt="image" src="https://github.com/user-attachments/assets/15f5a013-1509-46b6-8449-da38f1deaaee" />
+![sw-cust](https://github.com/user-attachments/assets/24c3b6c6-598d-4948-b490-e371e6bfbe5b)
 
 Floor 3-Guest-SW
 
-<img width="460" alt="image" src="https://github.com/user-attachments/assets/35dd3257-2f56-4fd6-9a33-f225d02a39e3" />
+![sw-guest](https://github.com/user-attachments/assets/36431081-46a1-4819-9a55-985679f7e2e6)
 
 Floor4-Admin-SW
 
-<img width="463" alt="image" src="https://github.com/user-attachments/assets/2343f489-2bb9-4d6b-9484-82156312b405" />
+![sw-admin](https://github.com/user-attachments/assets/91626c43-42a3-4dbc-b338-e49658a747bd)
 
-Floor4-ICT-SW
+Floor4-IT-SW
 
-<img width="464" alt="image" src="https://github.com/user-attachments/assets/9109d591-cbdc-497d-9247-0b32150f579c" />
+![sw-IT](https://github.com/user-attachments/assets/18facbe5-4108-4867-a773-a64b715641d9)
 
 Floor4-Servers-SW
 
-<img width="464" alt="image" src="https://github.com/user-attachments/assets/6769bd95-3a5c-43ef-b1ad-4c8e3a6d465a" />
+![sw-server](https://github.com/user-attachments/assets/dc4885e3-3fea-493b-8e2c-5f42f07fffae)
 
-Configuring trunk and IP address on layer 3 switches:
 
-Floor1-L3SW
-
-<img width="322" alt="image" src="https://github.com/user-attachments/assets/af6af032-8ea3-43af-9e6f-320343ce9492" />
-
-Floor2-L3SW
-
-<img width="439" alt="image" src="https://github.com/user-attachments/assets/67082cf5-d81c-4b97-8d6d-7a7bef04290e" />
-
-Floor3-L3SW
-
-<img width="437" alt="image" src="https://github.com/user-attachments/assets/3e1b7e84-dd91-45bb-b806-bfc2a6cbaf1d" />
-
-Floor4-L3SW
-
-<img width="445" alt="image" src="https://github.com/user-attachments/assets/e723126e-a1bb-4bcb-9925-642960013115" />
 
 Configuring IP Addresses on Core Layer Routers:
 
 Floor1-Router
 
-<img width="341" alt="image" src="https://github.com/user-attachments/assets/ebf523c0-1793-4dd3-ab3c-803164b0fc3f" />
 
 Floor2-Router
 
-<img width="325" alt="image" src="https://github.com/user-attachments/assets/70903b99-ed28-40d8-bc70-92f3181357a5" />
 
 Floor3-Router
 
-<img width="328" alt="image" src="https://github.com/user-attachments/assets/d7e30fe9-285e-4ffa-99d7-c3fe8068e186" />
 
 Floor4-Router
 
-<img width="322" alt="image" src="https://github.com/user-attachments/assets/0ace37fe-04d8-437c-adc9-e959aef131c1" />
+![F4-router](https://github.com/user-attachments/assets/d1ea5cee-99d8-4743-9618-615d87e351b6)
 
-Configuring OSPF on routers and layer 3 switches:
-
-Floor1-Router
-
-<img width="327" alt="image" src="https://github.com/user-attachments/assets/5399e339-7780-4992-9c58-3ca686487da6" />
-
-Floor2-Router
-
-<img width="324" alt="image" src="https://github.com/user-attachments/assets/5bf8a5e0-ec30-4559-87fd-86740f9e3a98" />
-
-Floor3-Router
-
-<img width="318" alt="image" src="https://github.com/user-attachments/assets/663a7f76-324e-407c-bd16-43241134fab9" />
-
-Floor4-Router
-
-<img width="329" alt="image" src="https://github.com/user-attachments/assets/d0bd4fe8-69b7-4c81-8bac-8ef443545c16" />
-
-Floor1-L3SW
-
-<img width="338" alt="image" src="https://github.com/user-attachments/assets/980bd56a-0ade-4377-bca8-05801783e620" />
-
-Floor2-L3SW
-
-<img width="328" alt="image" src="https://github.com/user-attachments/assets/548e55ae-9efa-4829-bbbf-0c22e8f72db9" />
-
-Floor3-L3SW
-
-<img width="326" alt="image" src="https://github.com/user-attachments/assets/b089b6d9-db92-47b4-9e92-549de59be4e2" />
-
-Floor4-L3SW
-
-<img width="327" alt="image" src="https://github.com/user-attachments/assets/50b43d54-3c3f-4f62-983c-4d7d94ee99ce" />
-
-Configuring static Ips on servers:
-
-DHCP Server
-
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/b5ffa121-1d7a-4f00-9b3b-5b25072374d0" />
-
-HTTP Server
-
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/df6655ec-b1fd-4967-90bc-971d233942b0" />
-
-Email Server
-
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/2a4a94a7-06cf-49d3-92b9-975dce3f2e15" />
-
-Configuring DHCP Server pools:
-
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/556e9eec-71a2-4f3e-992a-eb6cb7e5c176" />
 
 Configuring inter VLAN routing:
 
 Floor1-L3SW
 
-<img width="324" alt="image" src="https://github.com/user-attachments/assets/72c5cd6e-5827-4840-ae36-38511a077a5b" />
+![F1-L3SW](https://github.com/user-attachments/assets/42a0dfc4-51c3-4276-b724-982d17a3b8e8)
 
+![F1-L3SW 1](https://github.com/user-attachments/assets/b939ca9f-f95d-4b2e-ab8d-0f11616e2c52)
 
-<img width="328" alt="image" src="https://github.com/user-attachments/assets/3315737b-cc95-456e-8752-5edf961190fd" />
+![F1-L3SW 2](https://github.com/user-attachments/assets/2298d447-fccb-4360-b90e-b32939793414)
+
 
 Floor2-L3SW
 
-<img width="330" alt="image" src="https://github.com/user-attachments/assets/a34a8d4f-5658-4027-809e-e216e0b65fbe" />
+![F2-L3SW](https://github.com/user-attachments/assets/c268f0af-0736-4556-ac6b-e5aebba6364b)
 
+![F2-L3SW 1](https://github.com/user-attachments/assets/c7942dd9-1d99-4397-b7f6-bbab387c3d92)
 
-<img width="326" alt="image" src="https://github.com/user-attachments/assets/bd85918e-e282-42eb-9851-6ed4db8fbffb" />
+![F2-L3SW 2](https://github.com/user-attachments/assets/eb24703e-2e03-4dc1-815c-00520bec1b2a)
+
 
 Floor3-L3SW
 
-<img width="320" alt="image" src="https://github.com/user-attachments/assets/3460a355-7e58-4a24-8ea5-5fca3e318f7b" />
+![F3-L3SW](https://github.com/user-attachments/assets/1413cd54-98c1-401d-a66a-6e039ddd4143)
+
+![F3-L3SW 1](https://github.com/user-attachments/assets/ef2e6ab3-5fb6-454e-b2c5-c4a3cf0fa60c)
+
+![F3-L3SW 2](https://github.com/user-attachments/assets/f39b9aa3-57d8-4eb0-8573-6707d0262ff9)
+
 
 Floor4-L3SW
 
-<img width="333" alt="image" src="https://github.com/user-attachments/assets/e7c3927c-8543-44fa-be7f-64ed4587abad" />
+![F4-L3SW](https://github.com/user-attachments/assets/604dcfdd-6714-4731-90a1-66408f12acda)
+
+![F4-L3SW 1](https://github.com/user-attachments/assets/ae83a692-4126-4132-bbfe-b6b7424c09ab)
+
+![F4-L3SW 2](https://github.com/user-attachments/assets/189a8ad7-d371-4bb4-bc58-b486a821f231)
+
+
+Configuring trunk and IP address on layer 3 switches:
+
+Floor1-L3SW
+
+![F1-L3SW](https://github.com/user-attachments/assets/00bb354b-2d3d-42fa-a8bb-76e8be1ae183)
+
+![F1 L3SW](https://github.com/user-attachments/assets/2cb019a4-6256-4a68-94a0-0171f5d2532b)
+
+
+Floor2-L3SW
+
+![F2-L3SW](https://github.com/user-attachments/assets/d4b83c69-70c1-4aff-84c0-58c9f761c457)
+
+![F2 L3SW](https://github.com/user-attachments/assets/f8410d3f-fde5-482f-abe1-1fb702c8945d)
+
+
+Floor3-L3SW
+
+![F3-L3SW](https://github.com/user-attachments/assets/b7323498-34df-4fe4-9cd5-268253281ec1)
+
+![F3 L3SW](https://github.com/user-attachments/assets/4eca3503-20a9-4abb-bc2c-5f3fe3cbf0f2)
+
+
+Floor4-L3SW
+
+![F4-L3SW](https://github.com/user-attachments/assets/781349d4-26ea-45a4-bbcb-5f4a9cdcbf84)
+
+![F4 L3SW](https://github.com/user-attachments/assets/3862bc40-d203-4161-bae6-8282060b0447)
+
+
+
+Configuring OSPF on routers and layer 3 switches:
+
+Floor1-Router
+
+![F1-router](https://github.com/user-attachments/assets/16d36b91-7324-444a-b314-ae753e667a4a)
+
+
+Floor2-Router
+
+![F2-router](https://github.com/user-attachments/assets/948ee68a-e490-4914-be32-4df2278355eb)
+
+
+Floor3-Router
+
+![F3-router](https://github.com/user-attachments/assets/db6b7028-1229-4d4f-a4e4-d0b800315cf0)
+
+
+Floor4-Router
+
+![F4-router](https://github.com/user-attachments/assets/f203da39-d5fa-4562-8756-471216ca4daf)
+
+
+Floor1-L3SW
+
+![F1 L3SW](https://github.com/user-attachments/assets/dea51b7b-9146-4cb5-81ed-4c1d83ff71df)
+
+
+Floor2-L3SW
+
+![F2 L3SW](https://github.com/user-attachments/assets/0d86a8cb-1245-4ecb-a066-efd6be56cd72)
+
+
+Floor3-L3SW
+
+![F3 L3SW](https://github.com/user-attachments/assets/241eb9e6-7318-4c41-89ec-2a15719a3045)
+
+
+Floor4-L3SW
+
+![F4 L3SW](https://github.com/user-attachments/assets/a5a076f2-f56e-458d-bb43-a655a574fc80)
+
+
+
+Configuring static Ips on servers:
+
+DHCP Server
+
+
+WEB Server
+
+
+Email Server
+
+
+Configuring DHCP Server pools:
+
+
+
 
 Checking if DHCP is successful:
 
 Management-PC
 
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/c8f109e3-55fd-4095-9714-7d84374fa964" />
 
 Marketing-PC
 
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/7ae50db2-3764-44fa-b3f5-2f518fcb0ede" />
 
 Guest-PC
 
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/57631ac9-36f3-4867-92f6-cc094acf8f28" />
 
 Configuring Access points:
 
 Research-AP
 
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/f06b3079-b55b-4b2d-8c3f-3b9e5c324935" />
 
 Research-Laptop
 
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/a1a90dc7-919e-4c51-a3d3-6890ca3b2704" />
 
 ## Final Network in Packet Tracer
 
-![image](https://github.com/user-attachments/assets/e13dafec-bedc-44a1-89ed-297cc078aea4)
 
 
