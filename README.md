@@ -381,7 +381,7 @@ Email Server
 
 Configuring DHCP Server pools:
 
-
+![dhcp pool](https://github.com/user-attachments/assets/7a03aa8f-c077-4466-9ea5-c9f3777ee413)
 
 
 Checking if DHCP is successful:
