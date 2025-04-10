@@ -113,7 +113,7 @@ Floor2-Accounting-SW
 
 Floor2-Finance-SW
 
-![F2-FIN](https://github.com/user-attachments/assets/464caa10-1860-45da-bd6d-69a0b5e4b28e)
+![F2-FIN](https://github.com/user-attachments/assets/346705e5-3b41-4fa3-b449-89fe2b113976)
 
 Floor3-Logistics-SW
 
@@ -157,7 +157,7 @@ Floor3-L3SW
 
 Floor4-L3SW
 
-![F4-L3SW](https://github.com/user-attachments/assets/c5aa3167-25f0-46fb-a58e-e82de0dd551a)
+![F4-L3SW](https://github.com/user-attachments/assets/7c0b3a59-c691-4dc1-9162-8e15423711a4)
 
 
 
@@ -221,7 +221,7 @@ Floor3-Customer-SW
 
 Floor 3-Guest-SW
 
-![sw-guest](https://github.com/user-attachments/assets/36431081-46a1-4819-9a55-985679f7e2e6)
+![sw-guest](https://github.com/user-attachments/assets/1949fb89-0a54-4309-b344-027a0697cca7)
 
 Floor4-Admin-SW
 
@@ -253,7 +253,9 @@ Floor3-Router
 
 Floor4-Router
 
-![F4-router](https://github.com/user-attachments/assets/d1ea5cee-99d8-4743-9618-615d87e351b6)
+![F4-router](https://github.com/user-attachments/assets/eb0be7aa-8b54-40cd-8001-710794af0624)
+
+
 
 
 ### Configuring inter VLAN routing:
@@ -264,14 +266,14 @@ Floor1-L3SW
 
 ![F1-L3SW 1](https://github.com/user-attachments/assets/b939ca9f-f95d-4b2e-ab8d-0f11616e2c52)
 
-![F1-L3SW 2](https://github.com/user-attachments/assets/2298d447-fccb-4360-b90e-b32939793414)
+![F1-L3SW 2](https://github.com/user-attachments/assets/6e86d0c9-d67e-48bf-9e7c-0a1558fb4d1b)
 
 
 Floor2-L3SW
 
 ![F2-L3SW](https://github.com/user-attachments/assets/c268f0af-0736-4556-ac6b-e5aebba6364b)
 
-![F2-L3SW 1](https://github.com/user-attachments/assets/c7942dd9-1d99-4397-b7f6-bbab387c3d92)
+![F2-L3SW 1](https://github.com/user-attachments/assets/5d06a6e6-7277-4466-9711-2b6d890f53c6)
 
 ![F2-L3SW 2](https://github.com/user-attachments/assets/eb24703e-2e03-4dc1-815c-00520bec1b2a)
 
@@ -300,7 +302,7 @@ Floor1-L3SW
 
 ![F1-L3SW](https://github.com/user-attachments/assets/00bb354b-2d3d-42fa-a8bb-76e8be1ae183)
 
-![F1 L3SW](https://github.com/user-attachments/assets/2cb019a4-6256-4a68-94a0-0171f5d2532b)
+![F1 L3SW](https://github.com/user-attachments/assets/ad919e05-2e11-42ca-a83c-6332542cb6f3)
 
 
 Floor2-L3SW
@@ -312,7 +314,7 @@ Floor2-L3SW
 
 Floor3-L3SW
 
-![F3-L3SW](https://github.com/user-attachments/assets/b7323498-34df-4fe4-9cd5-268253281ec1)
+![F3-L3SW](https://github.com/user-attachments/assets/e2b1b4d1-983f-48aa-a556-44c3b29f41f8)
 
 ![F3 L3SW](https://github.com/user-attachments/assets/4eca3503-20a9-4abb-bc2c-5f3fe3cbf0f2)
 
@@ -321,7 +323,7 @@ Floor4-L3SW
 
 ![F4-L3SW](https://github.com/user-attachments/assets/781349d4-26ea-45a4-bbcb-5f4a9cdcbf84)
 
-![F4 L3SW](https://github.com/user-attachments/assets/3862bc40-d203-4161-bae6-8282060b0447)
+![F4 L3SW](https://github.com/user-attachments/assets/34085788-ddf0-40fd-be3f-15c91293fd56)
 
 
 
@@ -329,7 +331,7 @@ Floor4-L3SW
 
 Floor1-Router
 
-![F1-router](https://github.com/user-attachments/assets/16d36b91-7324-444a-b314-ae753e667a4a)
+![F1-router](https://github.com/user-attachments/assets/8638db5a-f201-4c4d-8a79-9cf50ea634fe)
 
 
 Floor2-Router
@@ -339,7 +341,7 @@ Floor2-Router
 
 Floor3-Router
 
-![F3-router](https://github.com/user-attachments/assets/db6b7028-1229-4d4f-a4e4-d0b800315cf0)
+![F3-router](https://github.com/user-attachments/assets/cb34f4f0-3b19-4db9-a9dd-db0ddadd940a)
 
 
 Floor4-Router
