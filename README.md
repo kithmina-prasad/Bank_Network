@@ -372,16 +372,22 @@ Configuring static Ips on servers:
 
 DHCP Server
 
-
-WEB Server
-
-
-Email Server
-
+![dhcp ip](https://github.com/user-attachments/assets/058c0243-2a8b-41b4-960b-89fddbed204d)
 
 Configuring DHCP Server pools:
 
 ![dhcp pool](https://github.com/user-attachments/assets/7a03aa8f-c077-4466-9ea5-c9f3777ee413)
+
+
+WEB Server
+
+![dhcp ip](https://github.com/user-attachments/assets/058c0243-2a8b-41b4-960b-89fddbed204d)
+
+
+Email Server
+
+![mail ip](https://github.com/user-attachments/assets/838f3dd4-f68f-45e5-a15a-8524eb599a7e)
+
 
 
 Checking if DHCP is successful:
