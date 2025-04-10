@@ -296,7 +296,7 @@ Floor4-L3SW
 ![F4-L3SW 2](https://github.com/user-attachments/assets/189a8ad7-d371-4bb4-bc58-b486a821f231)
 
 
-Configuring trunk and IP address on layer 3 switches:
+### Configuring trunk and IP address on layer 3 switches:
 
 Floor1-L3SW
 
@@ -413,7 +413,7 @@ Guest-PC
 ![guest pc](https://github.com/user-attachments/assets/45902671-de6f-415b-9156-c0512dd6d3c3)
 
 
-Configuring Access points:
+### Configuring Access points:
 
 Management-AP
 
