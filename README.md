@@ -1,8 +1,5 @@
 # Design and Implementation of an Enterprise Bank network
 
-## Networking simulation software used:
-Cisco Packet Tracer 8.2.2
-
 ## Scenario:
 Celestia Bank Ltd. is a US-owned company that deals with Banking and Insurance. The company intends to expand its services across the African continent having the first branch to be located in Nairobi, Kenya. The company has secured a four-story building to operate within the Kenyan capital city. Therefore, the company would like to allow sourcing knowledge from a group of final-year students from the local university to design and implement their company network. Assume you are among the students to take over this role, carefully read down the requirements then model the design and implement the network based on the company's needs. Each floor has departments as provided in the table below:
 
@@ -92,7 +89,7 @@ Base Network Address: 10.10.10.0
 
 Basic Configurations on Access switches/L3 Switches and Routers:
 
-Configuring access layer switches:
+### Configuring access layer switches:
 
 Floor1-Management-SW
 
@@ -134,7 +131,7 @@ Floor4-Admin-SW
 
 ![F4-Admin](https://github.com/user-attachments/assets/d06c1fe1-69cb-4fd4-89f0-96916fc7e13a)
 
-Floor4-ICT-SW
+Floor4-IT-SW
 
 ![F4-IT](https://github.com/user-attachments/assets/d74ad6d1-3f03-4c36-a4ce-280e88f7d45e)
 
@@ -144,7 +141,7 @@ Floor4-Server-SW
 
 
 
-Configuring Distribution layer switches:
+### Configuring Distribution layer switches:
 
 Floor1-L3SW
 
@@ -165,7 +162,7 @@ Floor4-L3SW
 
 
 
-Configuring Core Layer Routers:
+### Configuring Core Layer Routers:
 
 Floor1 router
 
@@ -188,7 +185,7 @@ Floor4 router
 
 
 
-Configuring trunk and access ports, VLANS and port security:
+### Configuring trunk and access ports, VLANS and port security:
 
 Floor1-Management-SW
 
@@ -240,23 +237,26 @@ Floor4-Servers-SW
 
 
 
-Configuring IP Addresses on Core Layer Routers:
+### Configuring IP Addresses on Core Layer Routers:
 
 Floor1-Router
 
+![Untitled design (1)](https://github.com/user-attachments/assets/0538784b-f26e-43ac-9aa6-aff63bcc8a81)
 
 Floor2-Router
 
+![Untitled design (2)](https://github.com/user-attachments/assets/001478eb-08ce-45d9-90cc-81e23c2e353c)
 
 Floor3-Router
 
+![Untitled design (3)](https://github.com/user-attachments/assets/93550b4d-7a3b-4f2e-aa75-ad4433874b76)
 
 Floor4-Router
 
 ![F4-router](https://github.com/user-attachments/assets/d1ea5cee-99d8-4743-9618-615d87e351b6)
 
 
-Configuring inter VLAN routing:
+### Configuring inter VLAN routing:
 
 Floor1-L3SW
 
@@ -325,7 +325,7 @@ Floor4-L3SW
 
 
 
-Configuring OSPF on routers and layer 3 switches:
+### Configuring OSPF on routers and layer 3 switches:
 
 Floor1-Router
 
@@ -368,7 +368,7 @@ Floor4-L3SW
 
 
 
-Configuring static Ips on servers:
+### Configuring static Ips on servers:
 
 DHCP Server
 
@@ -383,14 +383,18 @@ WEB Server
 
 ![dhcp ip](https://github.com/user-attachments/assets/058c0243-2a8b-41b4-960b-89fddbed204d)
 
+![web](https://github.com/user-attachments/assets/f0c3c34a-346d-47e4-83e9-a2233a43dfe7)
+
 
 Email Server
 
 ![mail ip](https://github.com/user-attachments/assets/838f3dd4-f68f-45e5-a15a-8524eb599a7e)
 
+![email](https://github.com/user-attachments/assets/edf09d52-d766-483d-8165-02488e33523e)
 
 
-Checking if DHCP is successful:
+
+### Checking if DHCP is successful:
 
 Management-PC
 
