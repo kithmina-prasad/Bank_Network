@@ -1,7 +1,7 @@
 # Design and Implementation of an Enterprise Bank network
 
 ## Scenario:
-Celestia Bank Ltd. is a US-owned company that deals with Banking and Insurance. The company intends to expand its services across the African continent having the first branch to be located in Nairobi, Kenya. The company has secured a four-story building to operate within the Kenyan capital city. Therefore, the company would like to allow sourcing knowledge from a group of final-year students from the local university to design and implement their company network. Assume you are among the students to take over this role, carefully read down the requirements then model the design and implement the network based on the company's needs. Each floor has departments as provided in the table below:
+Celestia Bank Ltd is a US-owned company that deals with Banking and Insurance. The company intends to expand its services across the African continent having the first branch to be located in Nairobi, Kenya. The company has secured a four-story building to operate within the Kenyan capital city. Therefore, the company would like to allow sourcing knowledge from a group of final-year students from the local university to design and implement their company network. Assume you are among the students to take over this role, carefully read down the requirements then model the design and implement the network based on the company's needs. Each floor has departments as provided in the table below:
 
 <img width="470" alt="image" src="https://github.com/user-attachments/assets/ef6f6915-0b19-4e4b-bc4b-f4feebb34796" />
 
