@@ -425,6 +425,7 @@ Management-Laptop
 ![mgt laptop](https://github.com/user-attachments/assets/f760e10c-2edb-449a-9b80-db14fcd83e1e)
 
 
+
 ## Final Network in Packet Tracer
 
 ![network](https://github.com/user-attachments/assets/4fb979e5-6f00-42f6-9e3a-e13a66ca6f5e)
